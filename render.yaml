@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python bot_new.py
+    startCommand: python bot.py
     healthCheckPath: /
     envVars:
       - key: DISCORD_BOT_TOKEN
