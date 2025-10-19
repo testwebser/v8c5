@@ -1,12 +1,15 @@
 services:
-  - type: worker
+  - type: web
     name: discord-stock-bot
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python bot_new.py
+    healthCheckPath: /
     envVars:
       - key: DISCORD_BOT_TOKEN
         sync: false
       - key: LOG_LEVEL
         value: INFO
+      - key: PORT
+        value: 10000
