@@ -7,6 +7,8 @@ services:
     startCommand: python bot.py
     healthCheckPath: /
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
       - key: DISCORD_BOT_TOKEN
         sync: false
       - key: LOG_LEVEL
